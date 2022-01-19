@@ -9,7 +9,7 @@ export const Btn = styled.button`
   cursor: pointer;
   color: #fff;
   font-size: 16px;
-  padding: 6px 8px;
+  padding: 5px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #283966;
   :hover {
