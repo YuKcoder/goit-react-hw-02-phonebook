@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { LabelInput } from './ContactForm.styled';
+import Button from '../Button';
 import * as Yup from 'yup';
 
 const validationSchema = Yup.object({
@@ -57,7 +58,7 @@ export default class ContactForm extends Component {
             <ErrorMessage name="number" />
           </LabelInput>
 
-          <button type="submit">Submit</button>
+          <Button type="submit">Submit</Button>
         </Form>
       </Formik>
     );

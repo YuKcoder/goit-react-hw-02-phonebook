@@ -21,6 +21,7 @@ export default class Add extends Component {
   checkContact = name => {
     const { contacts } = this.state;
     const normalizeName = name.toLowerCase();
+
     return contacts.find(
       contact => normalizeName === contact.name.toLocaleLowerCase()
     );
@@ -28,6 +29,7 @@ export default class Add extends Component {
 
   addContact = ({ name, number }) => {
     const contact = { id: nanoid(), name, number };
+
     if (this.checkContact(name)) {
       alert(`${name} is already in contacts.`);
     } else {
@@ -48,6 +50,7 @@ export default class Add extends Component {
   getVisibleNumbers = () => {
     const { contacts, filter } = this.state;
     const normalizeFilter = filter.toLowerCase();
+
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizeFilter)
     );

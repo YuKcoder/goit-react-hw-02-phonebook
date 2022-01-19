@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import Button from '../Button';
 
 export default function ContactItem({
   name,
@@ -8,9 +9,9 @@ export default function ContactItem({
 }) {
   return (
     <li>
-      <button type="button" onClick={() => onDeleteContact(contactId)}>
-        x
-      </button>
+      <Button type="button" onClick={() => onDeleteContact(contactId)}>
+        Delete
+      </Button>
       {name}: {number}
     </li>
   );
